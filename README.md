@@ -62,17 +62,20 @@ If using vg, create XG indexes for rapid mapping and variant calling.
     Prepare/Harmonize Phenotype and Covariate Data
     Ensure your phenotype table matches sample IDs.
     Include relevant covariates (age, sex, batch effects, ancestry PCs).
+  
     ```
       bash
         bcftools query -f '%CHROM\t%POS\t%ID[\t%GT]\n' input.vcf.gz > genotype_matrix.tsv  #single sample/multisample)
      ```
-     #Explanation:
+    
+    #Explanation:
                   %CHROM, %POS, %ID: Outputs chromosome, position, and variant ID as locus identifiers.
                   [\t%GT]: For each sample, outputs the genotype (0/0, 0/1, etc.), separated by tabs.
                   Each line is a locus (SV/VNTR/SNP), and columns after the first three are per sample.
                   The output is a tab-delimited file ideal for pandas, R, or spreadsheet analysis.
 
-      To include SV or VNTR-specific information (e.g., repeat lengths, SV type):
+    To include SV or VNTR-specific information (e.g., repeat lengths, SV type):
+    
     ```
       bash
         bcftools query -f '%CHROM\t%POS\t%ID\t%INFO/SVLEN\t%INFO/REPTYPE[\t%GT]\n' input.vcf.gz > genotype_matrix_with_info.tsv
