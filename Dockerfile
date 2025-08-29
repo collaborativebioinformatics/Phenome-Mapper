@@ -19,15 +19,18 @@ RUN curl -L -o Miniforge.sh \
 
 
 # install based on a recipe
-COPY conda_spec.txt /tmp/conda_spec.txt
+# COPY conda_spec.txt /tmp/conda_spec.txt
 RUN conda config --system --add channels conda-forge \
  && conda config --system --add channels bioconda \
  && conda config --system --set channel_priority flexible \
- && conda create --name phenomemapper --file /tmp/conda_spec.txt \
+ && conda create --name phenomemapper spades quast minigraph \
+	bcftools samtools pandas numpy seaborn \
+	r-base r-data.table r-tidyverse \
+	plink2 regenie \
  && conda clean -afy
 
 # Sanity check (optional)
 # RUN conda run -n phenomemapper spades.py --version && vg version
 
-ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "phenomemapper"]
+ENTRYPOINT ["conda", "run", "--live-stream", "-n", "phenomemapper"]
 CMD ["bash"]
