@@ -2,9 +2,12 @@
 
                         To find association between multiple graph variation loci and (sub)phenotypes
   Detailed step-by-step workflow to find associations between multiple graph variation loci (such as SV/VNTR) and (sub)phenotypes:
+
 <div align="center">
-<img width="600" alt="Phenome-Mapper workflow" src="https://github.com/user-attachments/assets/4cb6269f-efbc-4a5c-b744-ec03993f7223" />
+<img width="1880" height="1074" alt="image" src="https://github.com/user-attachments/assets/2aed4c54-427c-4b85-84cb-7806ce40d00f" />
 </div>
+
+
 
 1)**Build a sequence graph:** Use pangenome graph construction tools (e.g., minigraph, vg, APAV toolkit) to integrate all samples, capturing all structural variations and VNTRs.
 **Step 1: Build a Sequence Graph**
