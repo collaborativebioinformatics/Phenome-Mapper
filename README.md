@@ -2,6 +2,7 @@
 
                         To find association between multiple graph variation loci and (sub)phenotypes
   Detailed step-by-step workflow to find associations between multiple graph variation loci (such as SV/VNTR) and (sub)phenotypes:
+
 <div align="center">
 <img width="600" alt="Phenome-Mapper workflow" src="https://github.com/user-attachments/assets/4cb6269f-efbc-4a5c-b744-ec03993f7223" />
 </div>
