@@ -1,6 +1,5 @@
 ## Phenome-Mapper
-
-                        To find association between multiple graph variation loci and (sub)phenotypes
+Mapping the genetic basis underlying human phenotypic diversity is a central goal of genomics research. Phenome Mapper offers a comprehensive solution for association analysis between diverse human traits and multiple graph-represented variation loci.
   Detailed step-by-step workflow to find associations between multiple graph variation loci (such as SV/VNTR) and (sub)phenotypes:
 
 <div align="center">
